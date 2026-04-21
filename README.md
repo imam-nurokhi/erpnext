@@ -1,185 +1,125 @@
+# NexERP — by Nexora
 
-<div align="center">
-    <a href="https://frappe.io/erpnext">
-	<img src="./erpnext/public/images/v16/erpnext.svg" alt="ERPNext Logo" height="80px" width="80px"/>
-    </a>
-    <h2>ERPNext</h2>
-    <div align="center">
-        <p>Powerful, Intuitive and Open-Source ERP</p>
-    </div>
+> **Integrated Enterprise Resource Planning for Modern Indonesian Businesses**
+> *Powered by ERPNext v16 | Part of CBQA Global Group | Innovating With Purpose*
 
-[![Learn on Frappe School](https://img.shields.io/badge/Frappe%20School-Learn%20ERPNext-blue?style=flat-square)](https://frappe.school)<br><br>
-[![CI](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml/badge.svg?event=schedule)](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml)
-[![docker pulls](https://img.shields.io/docker/pulls/frappe/erpnext-worker.svg)](https://hub.docker.com/r/frappe/erpnext-worker)
+[![ERPNext](https://img.shields.io/badge/ERPNext-v16.14-blue)](https://erpnext.com)
+[![Frappe HRMS](https://img.shields.io/badge/HRMS-v16.5-orange)](https://github.com/frappe/hrms)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://hub.docker.com/r/frappe/erpnext)
+[![License](https://img.shields.io/badge/License-GPL--3.0-lightgrey)](LICENSE)
 
-</div>
+---
 
-<div align="center">
-	<img src="./erpnext/public/images/v16/hero_image.png" alt="ERPNext Hero Image"/>
-</div>
+## Overview
 
-<div align="center">
-	<a href="https://erpnext-demo.frappe.cloud/api/method/erpnext_demo.erpnext_demo.auth.login_demo">Live Demo</a>
-	-
-	<a href="https://frappe.io/erpnext">Website</a>
-	-
-	<a href="https://docs.frappe.io/erpnext/">Documentation</a>
-</div>
+**NexERP** is Nexora's enterprise ERP platform built on [ERPNext](https://erpnext.com), customized for Indonesian businesses with full HR & Payroll localization (BPJS, PPh 21).
 
-## ERPNext
+**Company:** Nexora | Part of CBQA Global Group
+**URL:** https://cbqaglobal.co.id
 
-100% Open-Source ERP System to help you run your business.
+---
 
-### Motivation
+## Key Features
 
-Running a business is a complex task - handling invoices, tracking stock, managing personnel, and other daily operations. In a market where software is sold separately to manage each of these tasks, ERPNext does all of the above and more, for free.
+### Core ERP Modules
+- **Accounting & Finance** — GL, AR/AP, Bank Reconciliation, PPN 11%, PPh
+- **HR & Payroll** — Employee Management, BPJS, PPh 21, Leave, Attendance, Recruitment
+- **Procurement** — Purchase Orders, Supplier Management, 3-way matching
+- **Sales & CRM** — Lead → Quotation → Sales Order → Invoice
+- **Inventory & Stock** — Multi-warehouse, Batch/Serial, FIFO/LIFO
+- **Manufacturing** — BOM, Work Orders, Production Planning
+- **Projects** — Task Management, Timesheet, Resource Allocation
+- **Assets** — Asset Register, Depreciation, Maintenance
 
-### Key Features
+### Indonesian Localizations
+- **BPJS Ketenagakerjaan**: JKK, JKM, JHT (2% karyawan / 3.7% perusahaan), JP (1% / 2%)
+- **BPJS Kesehatan**: 1% karyawan / 4% perusahaan
+- **PPh 21**: Auto-calculation pada komponen gaji
+- **Kalender Libur**: Hari Libur Nasional Indonesia 2026
+- **Mata Uang**: IDR default
 
-- **Accounting**: All the tools you need to manage cash flow in one place, right from recording transactions to summarizing and analyzing financial reports.
-- **Order Management**: Track inventory levels, replenish stock, and manage sales orders, customers, suppliers, shipments, deliverables, and order fulfillment.
-- **Manufacturing**: Simplifies the production cycle, helps track material consumption, exhibits capacity planning, handles subcontracting, and more!
-- **Asset Management**: From purchase to disposal, IT infrastructure to equipment. Covers every branch of your organization, all in one centralized system.
-- **Projects**: Deliver both internal and external projects on time, budget and profitability. Track tasks, timesheets, and issues by project.
+---
 
-<details open>
+## Quick Start
 
-<summary>More</summary>
-	<img src="https://erpnext.com/files/v16_bom.png"/>
-	<img src="https://erpnext.com/files/v16_stock_summary.png"/>
-	<img src="https://erpnext.com/files/v16_job_card.png"/>
-	<img src="https://erpnext.com/files/v16_tasks.png"/>
-</details>
+### Prerequisites
+- Docker 20+ and Docker Compose v2+
+- Minimum: 4GB RAM, 20GB disk
 
-### Under the Hood
+### Run with Docker
 
-- [**Frappe Framework**](https://github.com/frappe/frappe): A full-stack web application framework written in Python and JavaScript. The framework provides a robust foundation for building web applications, including a database abstraction layer, user authentication, and a REST API.
-
-- [**Frappe UI**](https://github.com/frappe/frappe-ui): A Vue-based UI library, to provide a modern user interface. The Frappe UI library provides a variety of components that can be used to build single-page applications on top of the Frappe Framework.
-
-## Production Setup
-
-### Managed Hosting
-
-You can try [Frappe Cloud](https://frappecloud.com), a simple, user-friendly, and sophisticated [open-source](https://github.com/frappe/press) platform to host Frappe applications reliably and securely.
-
-It handles installation, setup, upgrades, monitoring, maintenance, and support of your Frappe deployments. It is a fully featured developer platform with an ability to manage and control multiple Frappe deployments.
-
-<div>
-	<a href="https://erpnext-demo.frappe.cloud/app/home" target="_blank" rel="noopener noreferrer">
-		<picture>
-			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
-			<img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
-		</picture>
-	</a>
-</div>
-
-
-### Self-Hosted
-#### Docker
-
-See [Frappe Docker Documentation](https://github.com/frappe/frappe_docker) for full documentation & FAQ on Docker setup
-
-#### Prerequisites
-
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose v2](https://docs.docker.com/compose/)
-- [git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
-
-> For Docker basics and best practices refer to Docker's [documentation](https://docs.docker.com)
-
-#### Demo setup
-
-The fastest way to try ERPNext is to play in a pre-configured sandbox, in your browser, click the button below:
-
-<a href="https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/frappe/frappe_docker/main/pwd.yml">
-  <img src="https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png" alt="Try in PWD"/>
-</a>
-
-### Try on your environment
-
-> **⚠️ Disposable demo only**
->
-> **This setup is intended for quick evaluation. Expect to throw the environment away.** You will not be able to install custom apps to this setup. For production deployments, custom configurations, and detailed explanations, see the full documentation.
-
-First clone the repo:
-
-```sh
-git clone https://github.com/frappe/frappe_docker
+```bash
+git clone https://github.com/frappe/frappe_docker.git
 cd frappe_docker
-```
-
-Then run:
-
-```sh
 docker compose -f pwd.yml up -d
+# Open: http://localhost:8080
+# Login: Administrator / admin
 ```
-Wait for a couple of minutes for ERPNext site to be created or check the `create-site` container logs before opening browser on port `8080`. (username: `Administrator`, password: `admin`)
 
-See [Frappe Docker](https://github.com/frappe/frappe_docker/blob/main/docs/01-getting-started/03-arm64.md) for ARM based docker setup
+### Custom NexERP Image (with HR module)
 
+```dockerfile
+FROM frappe/erpnext:v16.14.0
+USER frappe
+RUN cd /home/frappe/frappe-bench && \
+    bench get-app --branch version-16 --skip-assets hrms
+```
 
-## Development Setup
-### Manual Install
+```bash
+docker build -t nexora-erp:latest .
+docker compose -f pwd-nexora.yml up -d
 
-The Easy Way: our install script for bench will install all dependencies (e.g. MariaDB). See https://github.com/frappe/bench for more details.
+# Install HR on site
+docker exec <backend-container> bench --site frontend install-app hrms
+docker exec <backend-container> bench build --app hrms
+```
 
-New passwords will be created for the ERPNext "Administrator" user, the MariaDB root user, and the Frappe user (the script displays the passwords and saves them to ~/frappe_passwords.txt).
+---
 
+## HR Payroll Structure (Staff - Nexora)
 
-### Local
+| Component | Type | Nilai |
+|-----------|------|-------|
+| Gaji Pokok | Earning | `base` |
+| Tunjangan Jabatan | Earning | `base * 0.2` |
+| Tunjangan Transport | Earning | Rp 500.000 |
+| Tunjangan Makan | Earning | Rp 400.000 |
+| BPJS JHT | Deduction | `base * 0.02` |
+| BPJS JP | Deduction | `base * 0.01` |
+| BPJS Kesehatan | Deduction | `base * 0.01` |
+| PPh 21 | Deduction | (calculated) |
 
-To setup the repository locally follow the steps mentioned below:
+---
 
-1. Setup bench by following the [Installation Steps](https://frappeframework.com/docs/user/en/installation) and start the server
-   ```
-   bench start
-   ```
+## Architecture
 
-2. In a separate terminal window, run the following commands:
-   ```
-   # Create a new site
-   bench new-site erpnext.localhost
-   ```
+```
+nginx :8080 → gunicorn (backend) → MariaDB 11.8
+                                 → Redis (cache + queue)
+websocket (Socket.IO) + scheduler + queue workers
+```
 
-3. Get the ERPNext app and install it
-   ```
-   # Get the ERPNext app
-   bench get-app https://github.com/frappe/erpnext
+---
 
-   # Install the app
-   bench --site erpnext.localhost install-app erpnext
-   ```
+## Useful Commands
 
-4. Open the URL `http://erpnext.localhost:8000/app` in your browser, you should see the app running
+```bash
+# Bench CLI
+docker exec -it <backend> bash
+source /home/frappe/frappe-bench/env/bin/activate
 
-## Learning and Community
+bench --site frontend list-apps
+bench --site frontend clear-cache
+bench --site frontend migrate
+bench --site frontend backup
+```
 
-1. [Frappe School](https://school.frappe.io) - Learn Frappe Framework and ERPNext from the various courses by the maintainers or from the community.
-2. [Official documentation](https://docs.erpnext.com/) - Extensive documentation for ERPNext.
-3. [Discussion Forum](https://discuss.frappe.io/c/erpnext/6) - Engage with the community of ERPNext users and service providers.
-4. [Telegram Group](https://erpnext_public.t.me) - Get instant help from huge community of users.
+---
 
+## License
 
-## Contributing
+GNU General Public License v3.0 — same as upstream ERPNext.
 
-1. [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
-2. [Report Security Vulnerabilities](https://erpnext.com/security)
-3. [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
-4. [Translations](https://crowdin.com/project/frappe)
+---
 
-
-## Logo and Trademark Policy
-
-Please read our [Logo and Trademark Policy](TRADEMARK_POLICY.md).
-
-<br />
-<br />
-<div align="center" style="padding-top: 0.75rem;">
-	<a href="https://frappe.io" target="_blank">
-		<picture>
-			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
-			<img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
-		</picture>
-	</a>
-</div>
+*NexERP v1.0 | April 2026 | Nexora | Part of CBQA Global Group*
